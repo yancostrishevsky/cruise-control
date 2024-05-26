@@ -1,0 +1,54 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+  Processor CC.AGH_processor: Total MIPS 4,600 MIPS of bound tasks within MIPS capacity 5,000 MIPS of CC.AGH_processor
+
+Memory Summary Report: 
+  Total RAM 20.0 KB of bound tasks within Memory capacity 4000000.0 KB of CC.AGH_memory
+
+
+Detailed Workload Report:  for Processor CC.AGH_processor with Capacity 5,000 MIPS
+
+Component,Budget,Actual
+  device CC.RADAR,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.RADAR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.LANE_CAMERA,   0,300 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.LANE_CAMERA total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+  device CC.LANE_WARNING,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.LANE_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.VIBRATION_MOTOR,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.VIBRATION_MOTOR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.AUDITORY_WARNING,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.AUDITORY_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.VISUAL_ALERT,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.VISUAL_ALERT total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  system CC.I_C,   0,500 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.I_C total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+  system CC.C_V,   0,400 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.C_V total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+  system CC.C_D_S,   0,500 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.C_D_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+  system CC.C_T_S,   0,500 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.C_T_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+  system CC.ASC,   0,600 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.ASC total 0,000 MIPS below budget 0,600 MIPS (100,0 % slack)
+  system CC.LCM,   0,400 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.LCM total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+  system CC.LDDS,   0,400 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.LDDS total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+system CC, 0,000 MIPS,4,600 MIPS,
+Total,,4,600 MIPS
+
+
+Detailed Workload Report:  for memory CC.AGH_memory with Capacity 4000000,000 KBYTE
+
+Component,Budget,Actual
+BRAKE, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+TA, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC_ON_OFF, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+ENGINE, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+RESUME, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+SP_UP, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+SP_DN, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+WHEEL_ROT_SENSOR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+RADAR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+LANE_CAMERA, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+LANE_WARNING, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+VIBRATION_MOTOR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+AUDITORY_WARNING, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+VISUAL_ALERT, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC.RADAR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC.LANE_CAMERA, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC.LANE_WARNING, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC.VIBRATION_MOTOR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC.AUDITORY_WARNING, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+CC.VISUAL_ALERT, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+Total, ,20,000 KBYTE,

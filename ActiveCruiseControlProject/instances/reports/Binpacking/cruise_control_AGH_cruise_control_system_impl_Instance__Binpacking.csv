@@ -1,0 +1,36 @@
+Bind threads to processors Report
+
+Binpacker Analysis Report
+
+Warning! Bus AGH_computer.AGH_bus is missing Transmission Time property. Using default of 1.0E-5
+Warning! Bus AGH_software.CC.AGH_bus is missing Transmission Time property. Using default of 1.0E-5
+Warning! Device AGH_software.BRAKE is missing period property. Using default of 1 ns
+Warning! Device AGH_software.TA is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC_ON_OFF is missing period property. Using default of 1 ns
+Warning! Device AGH_software.ENGINE is missing period property. Using default of 1 ns
+Warning! Device AGH_software.RESUME is missing period property. Using default of 1 ns
+Warning! Device AGH_software.SP_UP is missing period property. Using default of 1 ns
+Warning! Device AGH_software.SP_DN is missing period property. Using default of 1 ns
+Warning! Device AGH_software.WHEEL_ROT_SENSOR is missing period property. Using default of 1 ns
+Warning! Device AGH_software.RADAR is missing period property. Using default of 1 ns
+Warning! Device AGH_software.LANE_CAMERA is missing period property. Using default of 1 ns
+Warning! Device AGH_software.LANE_WARNING is missing period property. Using default of 1 ns
+Warning! Device AGH_software.VIBRATION_MOTOR is missing period property. Using default of 1 ns
+Warning! Device AGH_software.AUDITORY_WARNING is missing period property. Using default of 1 ns
+Warning! Device AGH_software.VISUAL_ALERT is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC.RADAR is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC.LANE_CAMERA is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC.LANE_WARNING is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC.VIBRATION_MOTOR is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC.AUDITORY_WARNING is missing period property. Using default of 1 ns
+Warning! Device AGH_software.CC.VISUAL_ALERT is missing period property. Using default of 1 ns
+Warning! Data size of connection source port AGH_software.CC.I_C.ok_to_run not specified
+Warning! Data size of connection source port AGH_software.CC_ON_OFF.cc_system_on_off not specified
+Warning! Data size of connection source port AGH_software.ENGINE.engine_status not specified
+Warning! Data size of connection source port AGH_software.RESUME.resume not specified
+Warning! Data size of connection source port AGH_software.SP_UP.increase_speed not specified
+Warning! Data size of connection source port AGH_software.SP_DN.decrease_speed not specified
+
+Binpacking results: Success
+
+Thread to Processor Bindings

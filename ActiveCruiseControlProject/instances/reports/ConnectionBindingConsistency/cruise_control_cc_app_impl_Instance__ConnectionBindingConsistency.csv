@@ -1,0 +1,16 @@
+Check connection binding consistency Report
+
+ERROR:  BRAKE.brake_status -> CC.I_C.brake_status: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  CC_ON_OFF.cc_system_on_off -> CC.I_C.cc_system_on_off: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  ENGINE.engine_status -> CC.I_C.engine_status: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  RESUME.resume -> CC.I_C.resume: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  SP_UP.increase_speed -> CC.I_C.increase_speed: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  SP_DN.decrease_speed -> CC.I_C.decrease_speed: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  WHEEL_ROT_SENSOR.wheel_pulse -> CC.C_V.wheel_pulse: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  RADAR.distance_to_vehicle -> CC.distance_to_vehicle: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  LANE_CAMERA.lane_image -> CC.lane_image: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
+ERROR:  CC.lane_warning_signal -> LANE_WARNING.lane_warning_signal: Hardware (processor or device) of connection destination is not physically connected by bus specified in connection binding.
+ERROR:  CC.lane_warning_signal -> VIBRATION_MOTOR.vibration_signal: Hardware (processor or device) of connection destination is not physically connected by bus specified in connection binding.
+ERROR:  CC.lane_warning_signal -> AUDITORY_WARNING.auditory_signal: Hardware (processor or device) of connection destination is not physically connected by bus specified in connection binding.
+ERROR:  CC.lane_warning_signal -> VISUAL_ALERT.visual_signal: Hardware (processor or device) of connection destination is not physically connected by bus specified in connection binding.
+ERROR:  CC.C_T_S.throttle_setting -> TA.throttle_setting: Hardware (processor or device) of connection destination is not physically connected by bus specified in connection binding.

@@ -1,0 +1,93 @@
+Not Bound Resource Budget Analysis Report
+
+Resource Summary: 
+**   System cc_app_impl_Instance budgets over capacity: MIPS capacity 5,000 MIPS : MIPS budget 7,100 MIPS
+  1 out of 1 with MIPS capacity
+  28 out of 28 with MIPS budget
+
+  RAM capacity 4000000,000 KBYTE : RAM budget 27,000 KBYTE
+  2 out of 2 with RAM capacity
+  28 out of 28 with RAM budget
+
+
+
+Detailed Processor MIPS Capacity Report 
+
+Component,Capacity
+processor CC.AGH_processor, 5,000 MIPS,
+Total, 5,000 MIPS,
+
+
+Detailed MIPS Budget Report 
+
+Component,Budget,Actual,Notes
+device BRAKE, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.BRAKE total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device TA, 0,300 MIPS,0,000 MIPS,device cc_app_impl_Instance.TA total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+device CC_ON_OFF, 0,100 MIPS,0,000 MIPS,device cc_app_impl_Instance.CC_ON_OFF total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device ENGINE, 0,100 MIPS,0,000 MIPS,device cc_app_impl_Instance.ENGINE total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device RESUME, 0,100 MIPS,0,000 MIPS,device cc_app_impl_Instance.RESUME total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device SP_UP, 0,100 MIPS,0,000 MIPS,device cc_app_impl_Instance.SP_UP total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device SP_DN, 0,100 MIPS,0,000 MIPS,device cc_app_impl_Instance.SP_DN total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device WHEEL_ROT_SENSOR, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.WHEEL_ROT_SENSOR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device RADAR, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.RADAR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device LANE_CAMERA, 0,300 MIPS,0,000 MIPS,device cc_app_impl_Instance.LANE_CAMERA total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+device LANE_WARNING, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.LANE_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device VIBRATION_MOTOR, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.VIBRATION_MOTOR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device AUDITORY_WARNING, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.AUDITORY_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device VISUAL_ALERT, 0,200 MIPS,0,000 MIPS,device cc_app_impl_Instance.VISUAL_ALERT total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.RADAR,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.RADAR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.LANE_CAMERA,   0,300 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.LANE_CAMERA total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+  device CC.LANE_WARNING,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.LANE_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.VIBRATION_MOTOR,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.VIBRATION_MOTOR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.AUDITORY_WARNING,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.AUDITORY_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  device CC.VISUAL_ALERT,   0,200 MIPS,  0,000 MIPS,device cc_app_impl_Instance.CC.VISUAL_ALERT total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+  system CC.I_C,   0,500 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.I_C total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+  system CC.C_V,   0,400 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.C_V total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+  system CC.C_D_S,   0,500 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.C_D_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+  system CC.C_T_S,   0,500 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.C_T_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+  system CC.ASC,   0,600 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.ASC total 0,000 MIPS below budget 0,600 MIPS (100,0 % slack)
+  system CC.LCM,   0,400 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.LCM total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+  system CC.LDDS,   0,400 MIPS,  0,000 MIPS,system cc_app_impl_Instance.CC.LDDS total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+system CC, 0,000 MIPS,4,600 MIPS,
+Total, ,7,100 MIPS,
+
+
+Detailed RAM Capacity Report 
+
+Component,Capacity
+memory CC.AGH_memory, 4000000,000 KBYTE,
+Total, 4000000,000 KBYTE,
+
+
+Detailed RAM Budget Report 
+
+Component,Budget,Actual,Notes
+device BRAKE, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.BRAKE total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device TA, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.TA total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device CC_ON_OFF, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.CC_ON_OFF total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device ENGINE, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.ENGINE total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device RESUME, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.RESUME total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device SP_UP, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.SP_UP total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device SP_DN, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.SP_DN total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device WHEEL_ROT_SENSOR, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.WHEEL_ROT_SENSOR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device RADAR, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.RADAR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device LANE_CAMERA, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.LANE_CAMERA total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device LANE_WARNING, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.LANE_WARNING total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device VIBRATION_MOTOR, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.VIBRATION_MOTOR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device AUDITORY_WARNING, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.AUDITORY_WARNING total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device VISUAL_ALERT, 1,000 KBYTE,0,000 KBYTE,device cc_app_impl_Instance.VISUAL_ALERT total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  device CC.RADAR,   1,000 KBYTE,  0,000 KBYTE,device cc_app_impl_Instance.CC.RADAR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  device CC.LANE_CAMERA,   1,000 KBYTE,  0,000 KBYTE,device cc_app_impl_Instance.CC.LANE_CAMERA total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  device CC.LANE_WARNING,   1,000 KBYTE,  0,000 KBYTE,device cc_app_impl_Instance.CC.LANE_WARNING total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  device CC.VIBRATION_MOTOR,   1,000 KBYTE,  0,000 KBYTE,device cc_app_impl_Instance.CC.VIBRATION_MOTOR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  device CC.AUDITORY_WARNING,   1,000 KBYTE,  0,000 KBYTE,device cc_app_impl_Instance.CC.AUDITORY_WARNING total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  device CC.VISUAL_ALERT,   1,000 KBYTE,  0,000 KBYTE,device cc_app_impl_Instance.CC.VISUAL_ALERT total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.I_C,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.I_C total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.C_V,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.C_V total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.C_D_S,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.C_D_S total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.C_T_S,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.C_T_S total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.ASC,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.ASC total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.LCM,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.LCM total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+  system CC.LDDS,   1,000 KBYTE,  0,000 KBYTE,system cc_app_impl_Instance.CC.LDDS total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+system CC, 0,000 KBYTE,13,000 KBYTE,
+Total, ,27,000 KBYTE,

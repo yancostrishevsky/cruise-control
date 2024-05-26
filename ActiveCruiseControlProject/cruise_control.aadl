@@ -1,0 +1,417 @@
+package cruise_control
+public
+	with sei;
+	with Base_Types;
+
+	data bool_type
+		properties
+			Data_Size => 16 bits;
+	end bool_type;
+
+	data float_type
+		properties
+			Data_Size => 32 bits;
+	end float_type;
+
+	data image_type
+		properties
+			Data_Size => 1024 bytes;
+	end image_type;
+
+-- Devices
+	device cruise_control_button
+		features
+			cc_system_on_off: out data port Base_Types::Boolean;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end cruise_control_button;
+
+	device brake_pedal
+		features
+			brake_status: out data port bool_type;
+		flows
+			Flow1: flow source brake_status {Latency => 10ms .. 10ms;};
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end brake_pedal;
+
+	device wheel_rotation_sensor
+		features
+			wheel_pulse: out data port float_type;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end wheel_rotation_sensor;
+
+	device throttle_actuator
+		features
+			throttle_setting: in data port float_type;
+		flows
+			Flow1: flow sink throttle_setting {Latency => 20ms .. 20ms;};
+		properties
+			SEI::MIPSBudget => 0.3 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end throttle_actuator;
+
+	device engine
+		features
+			engine_status: out data port Base_Types::Boolean;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end engine;
+
+	device resume_button
+		features
+			resume: out data port Base_Types::Boolean;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end resume_button;
+
+	device speed_up_button
+		features
+			increase_speed: out data port Base_Types::Boolean;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end speed_up_button;
+
+	device speed_dn_button
+		features
+			decrease_speed: out data port Base_Types::Boolean;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end speed_dn_button;
+
+	device radar_sensor
+		features
+			distance_to_vehicle: out data port float_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+			properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end radar_sensor;
+
+	device lane_camera
+		features
+			lane_image: out data port image_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.3 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end lane_camera;
+
+	device lane_departure_warning_actuator
+		features
+			lane_warning_signal: in data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end lane_departure_warning_actuator;
+
+	device vibration_motor
+		features
+			vibration_signal: in data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end vibration_motor;
+
+	device auditory_warning_system
+		features
+			auditory_signal: in data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end auditory_warning_system;
+
+	device visual_alert_system
+		features
+			visual_signal: in data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end visual_alert_system;
+
+-- Software components
+	system in_control
+		features
+			cc_system_on_off: in data port Base_Types::Boolean;
+			brake_status: in data port bool_type;
+			resume: in data port Base_Types::Boolean;
+			decrease_speed: in data port Base_Types::Boolean;
+			increase_speed: in data port Base_Types::Boolean;
+			set_speed: in data port Base_Types::Boolean;
+			engine_status: in data port Base_Types::Boolean;
+			ok_to_run: out data port Base_Types::Boolean;
+		flows
+			FS1: flow path brake_status -> ok_to_run {Latency => 30ms .. 30ms;};
+		properties
+			SEI::MIPSBudget => 0.5 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end in_control;
+
+	system compute_velocity
+		features
+			wheel_pulse: in data port float_type;
+			instantaneous_velocity: out data port float_type;
+		flows
+			FS1: flow path wheel_pulse -> instantaneous_velocity;
+		properties
+			SEI::MIPSBudget => 0.4 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end compute_velocity;
+
+	system compute_desired_speed
+		features
+			ok_to_run: in data port Base_Types::Boolean;
+			instantaneous_velocity: in data port float_type;
+			current_instantaneous_velocity: out data port float_type;
+			previous_instantaneous_velocity: in data port float_type;
+			desired_speed: out data port float_type;
+		flows
+			FS1: flow path ok_to_run -> desired_speed {Latency => 40ms .. 40ms;};
+			FS2: flow path instantaneous_velocity -> desired_speed;
+		properties
+			SEI::MIPSBudget => 0.5 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end compute_desired_speed;
+
+	system compute_throttle_setting
+		features
+			desired_speed: in data port float_type;
+			throttle_setting: out data port float_type;
+		flows
+			FS1: flow path desired_speed -> throttle_setting {Latency => 50ms .. 50ms;};
+		properties
+			SEI::MIPSBudget => 0.5 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end compute_throttle_setting;
+
+	system active_cruise_control
+		features
+			distance_to_vehicle: in data port float_type;
+			desired_speed: in data port float_type;
+			adjusted_speed: out data port float_type;
+		flows
+			FS1: flow path desired_speed -> adjusted_speed;
+		properties
+			SEI::MIPSBudget => 0.6 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end active_cruise_control;
+
+	system lane_control_module
+		features
+			lane_warning_signal: in data port bool_type;
+			lane_warning_output: out data port bool_type;
+		flows
+			FS1: flow path lane_warning_signal -> lane_warning_output;
+		properties
+			SEI::MIPSBudget => 0.4 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end lane_control_module;
+
+	system lane_departure_detection_system
+		features
+			lane_image: in data port image_type;
+			lane_warning_signal: out data port bool_type;
+		flows
+			FS1: flow path lane_image -> lane_warning_signal;
+		properties
+			SEI::MIPSBudget => 0.4 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end lane_departure_detection_system;
+
+-- System declarations
+	system cc_app
+		features
+			device_bus: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSCapacity => 3.0 mips;
+	end cc_app;
+
+-- Hardware platform declaration
+	bus PC104_ISA_16BIT
+		properties
+			SEI::BandWidthCapacity => 2.0 MBytesps;
+			SEI::BandWidthBudget => 200.0 KBytesps;
+	end PC104_ISA_16BIT;
+
+	memory SDRAM
+		features
+			controller_memory: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::RAMCapacity => 4.0 GByte;
+	end SDRAM;
+
+	processor PENTIUM
+		features
+			controller_cpu: requires bus access PC104_ISA_16BIT;
+		properties
+			Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 1ms;
+			Timing_Properties::Processor_Capacity => 1.0 MIPS;
+			SEI::MIPSCapacity => 5.0 mips;
+	end PENTIUM;
+
+-- The cruise control software system - composed of only ports, and the flow we want to analyze
+	system cruise_control
+		features
+			cc_system_on_off: in data port Base_Types::Boolean;
+			engine_status: in data port Base_Types::Boolean;
+			brake_status: in data port bool_type;
+			resume: in data port Base_Types::Boolean;
+			decrease_speed: in data port Base_Types::Boolean;
+			increase_speed: in data port Base_Types::Boolean;
+			set_speed: in data port Base_Types::Boolean;
+			wheel_pulse: in data port float_type;
+			throttle_setting: out data port float_type;
+			distance_to_vehicle: in data port float_type;
+			lane_image: in data port image_type;
+			lane_warning_signal: out data port bool_type;
+		flows
+			brake_flow_1: flow path brake_status -> throttle_setting;
+	end cruise_control;
+
+	system implementation cruise_control.impl
+   subcomponents
+      I_C: system in_control;
+      C_V: system compute_velocity;
+      C_D_S: system compute_desired_speed;
+      C_T_S: system compute_throttle_setting;
+      ASC: system active_cruise_control;
+      LCM: system lane_control_module;
+      LDDS: system lane_departure_detection_system;
+      RADAR: device radar_sensor;
+      LANE_CAMERA: device lane_camera;
+      LANE_WARNING: device lane_departure_warning_actuator;
+      VIBRATION_MOTOR: device vibration_motor;
+      AUDITORY_WARNING: device auditory_warning_system;
+      VISUAL_ALERT: device visual_alert_system;
+      AGH_memory: memory SDRAM;
+      AGH_bus: bus PC104_ISA_16BIT;
+      AGH_processor: processor PENTIUM;
+   connections
+      C1: port cc_system_on_off -> I_C.cc_system_on_off;
+      C2: port brake_status -> I_C.brake_status;
+      C3: port engine_status -> I_C.engine_status;
+      C4: port resume -> I_C.resume;
+      C5: port decrease_speed -> I_C.decrease_speed;
+      C6: port increase_speed -> I_C.increase_speed;
+      C7: port set_speed -> I_C.set_speed;
+      C8: port wheel_pulse -> C_V.wheel_pulse;
+      C9: port I_C.ok_to_run -> C_D_S.ok_to_run;
+      C10: port C_V.instantaneous_velocity -> C_D_S.instantaneous_velocity;
+      C11: port C_D_S.current_instantaneous_velocity -> C_D_S.previous_instantaneous_velocity;
+      C12: port C_D_S.desired_speed -> ASC.desired_speed;
+      C13: port ASC.adjusted_speed -> C_T_S.desired_speed;
+      C14: port C_T_S.throttle_setting -> throttle_setting;
+      C15: port RADAR.distance_to_vehicle -> ASC.distance_to_vehicle;
+      C16: port LANE_CAMERA.lane_image -> LDDS.lane_image;
+      C17: port LDDS.lane_warning_signal -> LCM.lane_warning_signal;
+      C18: port LCM.lane_warning_output -> LANE_WARNING.lane_warning_signal;
+      C19: port LCM.lane_warning_output -> VIBRATION_MOTOR.vibration_signal;
+      C20: port LCM.lane_warning_output -> AUDITORY_WARNING.auditory_signal;
+      C21: port LCM.lane_warning_output -> VISUAL_ALERT.visual_signal;
+      C22: bus access AGH_bus -> AGH_memory.controller_memory;
+      C23: bus access AGH_bus -> AGH_processor.controller_cpu;
+      C24: bus access AGH_processor.controller_cpu -> AGH_bus;
+      C25: bus access RADAR.busAccess -> AGH_bus;
+      C26: bus access LANE_CAMERA.busAccess -> AGH_bus;
+      C27: bus access LANE_WARNING.busAccess -> AGH_bus;
+      C28: bus access VIBRATION_MOTOR.busAccess -> AGH_bus;
+      C29: bus access AUDITORY_WARNING.busAccess -> AGH_bus;
+      C30: bus access VISUAL_ALERT.busAccess -> AGH_bus;
+   flows
+      brake_flow_1: flow path brake_status -> C2 -> I_C.FS1 -> C9 -> C_D_S.FS1 -> C12 -> ASC.FS1 -> C13 -> C_T_S.FS1 -> C14 -> throttle_setting;
+   properties
+      Actual_Processor_Binding => (reference(AGH_processor)) applies to I_C, C_V, C_D_S, C_T_S, ASC, LCM, LDDS;
+      Actual_Memory_Binding => (reference(AGH_memory)) applies to RADAR, LANE_CAMERA, LANE_WARNING, VIBRATION_MOTOR, AUDITORY_WARNING, VISUAL_ALERT;
+      Actual_Connection_Binding => (reference(AGH_bus)) applies to C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C21, C25, C26, C27, C28, C29, C30;
+end cruise_control.impl;
+
+	system implementation cc_app.impl
+   subcomponents
+      CC: system cruise_control.impl;
+      BRAKE: device brake_pedal;
+      TA: device throttle_actuator;
+      CC_ON_OFF: device cruise_control_button;
+      ENGINE: device engine;
+      RESUME: device resume_button;
+      SP_UP: device speed_up_button;
+      SP_DN: device speed_dn_button;
+      WHEEL_ROT_SENSOR: device wheel_rotation_sensor;
+      RADAR: device radar_sensor;
+      LANE_CAMERA: device lane_camera;
+      LANE_WARNING: device lane_departure_warning_actuator;
+      VIBRATION_MOTOR: device vibration_motor;
+      AUDITORY_WARNING: device auditory_warning_system;
+      VISUAL_ALERT: device visual_alert_system;
+   connections
+      C21: port CC_ON_OFF.cc_system_on_off -> CC.cc_system_on_off;
+      C22: port BRAKE.brake_status -> CC.brake_status;
+      C23: port ENGINE.engine_status -> CC.engine_status;
+      C24: port RESUME.resume -> CC.resume;
+      C25: port SP_DN.decrease_speed -> CC.decrease_speed;
+      C26: port SP_UP.increase_speed -> CC.increase_speed;
+      C28: port WHEEL_ROT_SENSOR.wheel_pulse -> CC.wheel_pulse;
+      C29: port CC.throttle_setting -> TA.throttle_setting;
+      C30: port RADAR.distance_to_vehicle -> CC.distance_to_vehicle;
+      C31: port LANE_CAMERA.lane_image -> CC.lane_image;
+      C34: port CC.lane_warning_signal -> LANE_WARNING.lane_warning_signal;
+      C35: port CC.lane_warning_signal -> VIBRATION_MOTOR.vibration_signal;
+      C36: port CC.lane_warning_signal -> AUDITORY_WARNING.auditory_signal;
+      C37: port CC.lane_warning_signal -> VISUAL_ALERT.visual_signal;
+   flows
+      ETE_F1: end to end flow BRAKE.Flow1 -> C22 -> CC.brake_flow_1 -> C29 -> TA.Flow1 {
+         Latency => 300ms .. 300ms;};
+   properties
+      Actual_Processor_Binding => (reference(CC.AGH_processor)) applies to CC;
+      Actual_Memory_Binding => (reference(CC.AGH_memory)) applies to BRAKE, TA, CC_ON_OFF, ENGINE, RESUME, SP_UP, SP_DN, WHEEL_ROT_SENSOR, RADAR, LANE_CAMERA, LANE_WARNING, VIBRATION_MOTOR, AUDITORY_WARNING, VISUAL_ALERT;
+      Actual_Connection_Binding => (reference(CC.AGH_bus)) applies to C21, C22, C23, C24, C25, C26, C28, C29, C30, C31, C34, C35, C36, C37;
+end cc_app.impl;
+
+	system cc_computer
+		features
+			device_bus: provides bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSCapacity => 1.5 mips;
+	end cc_computer;
+
+	system AGH_cruise_control_system
+		properties
+			SEI::MIPSCapacity => 2.4 mips;
+	end AGH_cruise_control_system;
+
+	system implementation cc_computer.AGH
+		subcomponents
+			AGH_memory: memory SDRAM;
+			AGH_bus: bus PC104_ISA_16BIT;
+			AGH_processor: processor PENTIUM;
+		connections
+			C1: bus access AGH_bus -> AGH_memory.controller_memory;
+			C2: bus access AGH_bus -> AGH_processor.controller_cpu;
+			C3: bus access AGH_processor.controller_cpu -> AGH_bus;
+	end cc_computer.AGH;
+
+	system implementation AGH_cruise_control_system.impl
+		subcomponents
+			AGH_computer: system cc_computer.AGH;
+			AGH_software: system cc_app.impl;
+		connections
+			C1: bus access AGH_computer.device_bus -> AGH_software.device_bus;
+		properties
+			Actual_Processor_Binding => (reference(AGH_computer.AGH_processor)) applies to AGH_software;
+			Actual_Memory_Binding => (reference(AGH_computer.AGH_memory)) applies to AGH_software;
+			Actual_Connection_Binding => (reference(AGH_computer.AGH_bus)) applies to C1;
+	end AGH_cruise_control_system.impl;
+
+end cruise_control;

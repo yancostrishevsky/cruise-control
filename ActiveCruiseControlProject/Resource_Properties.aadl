@@ -1,0 +1,10 @@
+
+
+property set Resource_Properties is
+  Memory_Requirement: aadlinteger applies to (memory, processor, system, device, thread, thread group);
+  CPU_Requirement: aadlinteger applies to (processor, system, device, thread, thread group);
+  Memory_Size: aadlinteger units (Byte, KByte => Byte * 1024, MByte => KByte * 1024, GByte => MByte * 1024) applies to (memory, system, device);
+  CPU_Speed: aadlinteger units (Hz, KHz => Hz * 1000, MHz => KHz * 1000, GHz => MHz * 1000) applies to (processor, system);
+end Resource_Properties;
+
+
