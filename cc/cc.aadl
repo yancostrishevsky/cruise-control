@@ -1,0 +1,645 @@
+package cc
+public
+	with sei;
+	with control_properties;
+
+	data bool_type
+		properties
+			Data_Size => 16 Bits;
+
+	end bool_type;
+
+	data float_type
+		properties
+			Data_Size => 32 Bits;
+
+	end float_type;
+	
+	data image_type
+		properties
+			Data_Size => 1024 bytes;
+	end image_type;
+	
+
+device cruise_control_button
+		features
+			cc_system_on_off: out data port;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end cruise_control_button;
+
+device brake_pedal
+    features
+        brake_status: out data port bool_type;
+        busAccess: requires bus access PC104_ISA_16BIT;
+    
+    flows
+        Flow1: flow source brake_status {
+            Latency => 30ms .. 30ms;};
+    properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+        
+end brake_pedal;
+
+
+device wheel_rotation_sensor
+		features
+			wheel_pulse: out data port;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end wheel_rotation_sensor;
+
+device throttle_actuator
+		features
+			throttle_setting: in data port {
+				control_properties::actuator_voltage_range => 0.0V .. 5.0V;
+			};
+			busAccess: requires bus access PC104_ISA_16BIT;
+		flows
+			Flow1: flow sink throttle_setting {
+				Latency => 20Ms .. 20ms;
+			};
+		properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end throttle_actuator;
+
+device engine
+	features
+engine_status: out data port ;
+busAccess: requires bus access PC104_ISA_16BIT;
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end engine;
+
+device resume_button
+features
+resume: out data port ;
+busAccess: requires bus access PC104_ISA_16BIT;
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+end resume_button;
+
+device speed_up_button
+features
+increase_speed: out data port ;
+busAccess: requires bus access PC104_ISA_16BIT;
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+end speed_up_button;
+
+device speed_dn_button
+features
+decrease_speed: out data port ;
+busAccess: requires bus access PC104_ISA_16BIT;
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+end speed_dn_button;
+
+device set_button
+features
+set_speed: out data port ;
+busAccess: requires bus access PC104_ISA_16BIT;
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+end set_button;
+
+device radar_sensor
+		features
+			distance_to_vehicle: out data port float_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+			properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end radar_sensor;
+
+	device lane_camera
+		features
+			lane_image: out data port image_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+			
+		flows
+        Flow1: flow source lane_image {
+            Latency => 30ms .. 30ms;};
+		properties
+			SEI::MIPSBudget => 0.3 mips;
+			SEI::RAMBudget => 1.0 KByte;
+		
+		
+		
+	end lane_camera;
+
+	device vibration_motor
+		features
+			vibration_signal: out data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end vibration_motor;
+
+	device auditory_warning_system
+		features
+			auditory_signal: in data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end auditory_warning_system;
+
+	device visual_alert_system
+		features
+			visual_signal: out data port bool_type;
+			busAccess: requires bus access PC104_ISA_16BIT;
+		properties
+			SEI::MIPSBudget => 0.2 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end visual_alert_system;
+	
+
+
+device operator_panel
+features
+cc_system_on_off: out data port bool_type;
+set_speed: out data port bool_type;
+decrease_speed: out data port bool_type;
+increase_speed: out data port bool_type;
+resume: out data port bool_type;
+end operator_panel;
+
+device sensor_platform
+
+features
+yaw_sensor_1: out data port float_type;
+yaw_rate_sensor_1: out data port float_type;
+lateral_force_sensor_1: out data port float_type;
+end sensor_platform;
+
+device steering_wheel
+features
+vibration_motor: in data port bool_type;
+busAccess: requires bus access PC104_ISA_16BIT;
+flows
+			Flow1: flow sink vibration_motor {
+				Latency => 20Ms .. 20ms;
+			};
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+
+end steering_wheel;
+
+device operator_display
+features
+alert_image: in data port bool_type;
+busAccess: requires bus access PC104_ISA_16BIT;
+flows
+			Flow1: flow sink alert_image{
+				Latency => 20Ms .. 20ms;
+			};
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+end operator_display;
+
+device speaker
+features
+audio_alert: in data port bool_type;
+busAccess: requires bus access PC104_ISA_16BIT;
+flows
+			Flow1: flow sink audio_alert {
+				Latency => 20Ms .. 20ms;
+			};
+properties
+			SEI::MIPSBudget => 0.1 mips;
+			SEI::RAMBudget => 1.0 KByte;
+end speaker;
+
+
+system cc_app
+features
+device_bus: requires bus access PC104_ISA_16BIT;
+	properties
+		SEI::MIPSBudget => 0.3 mips;
+		SEI::RAMBudget => 1.0 KByte;
+end cc_app;
+-- hardware platform declaration
+bus PC104_ISA_16BIT
+	properties
+			SEI::BandWidthCapacity => 2.0 MBytesps;
+			SEI::BandWidthBudget => 200.0 KBytesps;
+end PC104_ISA_16BIT;
+memory SDRAM
+features
+controller_memory: requires bus access PC104_ISA_16BIT;
+properties
+			SEI::RAMCapacity => 4.0 GByte;
+end SDRAM;
+processor PENTIUM
+features
+controller_cpu: requires bus access PC104_ISA_16BIT;
+properties
+			Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 1ms;
+			Timing_Properties::Processor_Capacity => 1.0 MIPS;
+			SEI::MIPSCapacity => 5.0 mips;
+end PENTIUM;
+
+system cruise_control
+	features
+		cc_system_on_off: in data port ;
+		engine_status: in data port ;
+		brake_status: in data port bool_type;
+		resume: in data port ;
+		decrease_speed: in data port ;
+		increase_speed: in data port ;
+		set_speed: in data port ;
+		wheel_pulse: in data port ;
+		throttle_setting: out data port ;
+		radar_sensor: in data port float_type;
+		lane_image: in data port image_type;
+		vibration_signal: out data port bool_type;
+		visual_signal: out data port bool_type;
+		auditory_signal: out data port bool_type;
+		
+
+flows
+brake_flow_1: flow path brake_status -> throttle_setting;
+alert_flow_1: flow path lane_image -> vibration_signal;
+alert_flow_2: flow path lane_image -> visual_signal;
+alert_flow_3: flow path lane_image -> auditory_signal;
+end cruise_control;
+
+process compute_velocity
+	features
+		wheel_pulse: in data port ;
+		instantaneous_velocity: out data port ;
+flows
+FS1: flow path wheel_pulse -> instantaneous_velocity;
+end compute_velocity;
+
+process implementation compute_velocity.impl
+	subcomponents
+		CVT: thread compute_velocity_thread;
+	connections
+		C1: port wheel_pulse -> CVT.wheel_pulse;
+		C2: port CVT.instantaneous_velocity -> instantaneous_velocity;
+	flows
+		FS1: flow path wheel_pulse -> C1 -> CVT.FS1 -> C2 -> instantaneous_velocity;
+end compute_velocity.impl;
+
+thread compute_velocity_thread
+	features
+		wheel_pulse: in data port ;
+		instantaneous_velocity: out data port ;
+flows
+FS1: flow path wheel_pulse -> instantaneous_velocity;
+end compute_velocity_thread;
+
+
+process compute_desired_speed
+	features
+	ok_to_run: in data port ;
+instantaneous_velocity: in data port ;
+
+distance_to_vehicle: in data port float_type;
+desired_speed: out data port ;
+flows
+FS1: flow path ok_to_run -> desired_speed {
+Latency => 40 Ms .. 40ms;
+};
+FS2: flow path instantaneous_velocity -> desired_speed;
+FS3: flow path distance_to_vehicle -> desired_speed;
+end compute_desired_speed;
+
+process implementation compute_desired_speed.impl
+    subcomponents
+        CDST: thread compute_desired_speed_thread;
+    connections
+        C1: port ok_to_run -> CDST.ok_to_run;
+        C2: port instantaneous_velocity -> CDST.instantaneous_velocity;
+        C3: port CDST.current_instantaneous_velocity -> CDST.previous_instantaneous_velocity;
+        C4: port distance_to_vehicle -> CDST.distance_to_vehicle;
+        C5: port CDST.desired_speed -> desired_speed;
+
+    flows
+        FS1: flow path ok_to_run -> C1 -> CDST.FS1 -> C5 -> desired_speed;
+end compute_desired_speed.impl;
+
+
+thread compute_desired_speed_thread
+	features
+	ok_to_run: in data port ;
+instantaneous_velocity: in data port ;
+current_instantaneous_velocity: out data port ;
+previous_instantaneous_velocity: in data port ;
+distance_to_vehicle: in data port float_type;
+desired_speed: out data port ;
+flows
+FS1: flow path ok_to_run -> desired_speed {
+Latency => 40 Ms .. 40ms;
+};
+FS2: flow path instantaneous_velocity -> desired_speed;
+FS3: flow path distance_to_vehicle -> desired_speed;
+end compute_desired_speed_thread;
+
+process compute_throttle_setting
+
+features
+desired_speed: in data port ;
+throttle_setting: out data port ;
+flows
+FS1: flow path desired_speed -> throttle_setting {
+Latency => 50 Ms .. 50ms;
+};
+end compute_throttle_setting;
+
+process implementation compute_throttle_setting.impl
+	subcomponents
+		CTST: thread compute_throttle_setting_thread;
+	connections
+		C1: port desired_speed -> CTST.desired_speed;
+		C2: port CTST.throttle_setting -> throttle_setting;
+	flows
+		FS1: flow path desired_speed -> C1 -> CTST.FS1 -> C2 -> throttle_setting;
+end compute_throttle_setting.impl;
+
+thread compute_throttle_setting_thread
+
+features
+desired_speed: in data port ;
+throttle_setting: out data port ;
+flows
+FS1: flow path desired_speed -> throttle_setting {
+Latency => 50 Ms .. 50ms;
+};
+end compute_throttle_setting_thread;
+
+
+process lane_control_module
+		features
+			lane_warning_signal: in data port bool_type;
+			lane_warning_output: out data port bool_type;
+		flows
+			FS1: flow path lane_warning_signal -> lane_warning_output;
+		properties
+			SEI::MIPSBudget => 0.4 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end lane_control_module;
+
+process implementation lane_control_module.impl
+	subcomponents
+		LCMT: thread lane_control_module_thread;
+	connections
+		C1: port lane_warning_signal -> LCMT.lane_warning_signal;
+		C2: port LCMT.lane_warning_output -> lane_warning_output;
+	flows
+		FS1: flow path lane_warning_signal -> C1 -> LCMT.FS1 -> C2 -> lane_warning_output;
+end lane_control_module.impl;
+
+thread lane_control_module_thread
+	features
+		lane_warning_signal: in data port bool_type;
+		lane_warning_output: out data port bool_type;
+	flows
+		FS1: flow path lane_warning_signal -> lane_warning_output;
+	properties
+		SEI::MIPSBudget => 0.4 mips;
+		SEI::RAMBudget => 1.0 KByte;
+end lane_control_module_thread;
+
+process lane_departure_detection_system
+		features
+			lane_image: in data port image_type;
+			lane_warning_signal: out data port bool_type;
+		flows
+			FS1: flow path lane_image -> lane_warning_signal;
+		properties
+			SEI::MIPSBudget => 0.4 mips;
+			SEI::RAMBudget => 1.0 KByte;
+	end lane_departure_detection_system;
+
+process implementation lane_departure_detection_system.impl
+	subcomponents
+		LDDST: thread lane_departure_detection_system_thread;
+	connections
+		C1: port lane_image -> LDDST.lane_image;
+		C2: port LDDST.lane_warning_signal -> lane_warning_signal;
+	flows
+			FS1: flow path lane_image -> C1 -> LDDST.FS1 -> C2 -> lane_warning_signal;
+end lane_departure_detection_system.impl;
+
+thread lane_departure_detection_system_thread
+	features
+		lane_image: in data port image_type;
+		lane_warning_signal: out data port bool_type;
+	flows
+		FS1: flow path lane_image -> lane_warning_signal;
+	properties
+		SEI::MIPSBudget => 0.4 mips;
+		SEI::RAMBudget => 1.0 KByte;
+end lane_departure_detection_system_thread;
+
+
+process in_control
+features
+cc_system_on_off: in data port;
+brake_status: in data port bool_type;
+resume: in data port ;
+decrease_speed: in data port ;
+increase_speed: in data port ;
+set_speed: in data port ;
+engine_status: in data port ;
+ok_to_run: out data port ;
+flows
+FS1: flow path brake_status -> ok_to_run {
+Latency => 30 Ms..30ms;
+};
+end in_control;
+
+process implementation in_control.impl
+	subcomponents
+		ICT: thread in_control_thread;
+	connections
+		C1: port cc_system_on_off -> ICT.cc_system_on_off;
+		C2: port brake_status -> ICT.brake_status;
+		C3: port resume -> ICT.resume;
+		C4: port decrease_speed -> ICT.decrease_speed;
+		C5: port increase_speed -> ICT.increase_speed;
+		C6: port set_speed -> ICT.set_speed;
+		C7: port engine_status -> ICT.engine_status;
+		C8: port ICT.ok_to_run -> ok_to_run;
+	flows
+		FS1: flow path brake_status -> C2 -> ICT.FS1 -> C8 -> ok_to_run;
+end in_control.impl;
+
+thread in_control_thread
+features
+cc_system_on_off: in data port;
+brake_status: in data port bool_type;
+resume: in data port ;
+decrease_speed: in data port ;
+increase_speed: in data port ;
+set_speed: in data port ;
+engine_status: in data port ;
+ok_to_run: out data port ;
+flows
+FS1: flow path brake_status -> ok_to_run {
+Latency => 30 Ms..30ms;
+};
+end in_control_thread;
+
+system implementation cruise_control.impl
+
+	subcomponents
+I_C: process in_control.impl;
+C_V: process compute_velocity.impl;
+C_D_S: process compute_desired_speed.impl;
+C_T_S: process compute_throttle_setting.impl;
+LCM: process lane_control_module.impl;
+LDDS: process lane_departure_detection_system.impl;
+connections
+C1: port cc_system_on_off -> I_C.cc_system_on_off;
+C2: port brake_status -> I_C.brake_status;
+C3: port engine_status -> I_C.engine_status;
+C4: port resume -> I_C.resume;
+C5: port decrease_speed -> I_C.decrease_speed;
+C6: port increase_speed -> I_C.increase_speed;
+C7: port set_speed -> I_C.set_speed;
+
+C8: port wheel_pulse -> C_V.wheel_pulse;
+C9: port I_C.ok_to_run -> C_D_S.ok_to_run;
+
+C10: port C_V.instantaneous_velocity ->
+C_D_S.instantaneous_velocity;
+
+C12: port C_D_S.desired_speed -> C_T_S.desired_speed;
+C13: port lane_image -> LDDS.lane_image;
+C17: port LDDS.lane_warning_signal -> LCM.lane_warning_signal;
+C19: port LCM.lane_warning_output -> vibration_signal;
+C20: port LCM.lane_warning_output -> auditory_signal;
+C21: port LCM.lane_warning_output -> visual_signal;
+C22: port radar_sensor -> C_D_S.distance_to_vehicle;
+C14: port C_T_S.throttle_setting -> throttle_setting;
+
+flows
+brake_flow_1: flow path brake_status -> C2 -> I_C.FS1
+-> C9 -> C_D_S.FS1
+-> C12 -> C_T_S.FS1
+-> C14 -> throttle_setting;
+alert_flow_1: flow path lane_image -> C13 -> LDDS.FS1 -> C17 -> LCM.FS1 -> C19 -> vibration_signal;
+alert_flow_2: flow path lane_image -> C13 -> LDDS.FS1 -> C17 -> LCM.FS1 -> C21 -> visual_signal;
+alert_flow_3: flow path lane_image -> C13 -> LDDS.FS1 -> C17 -> LCM.FS1 -> C20 -> auditory_signal;
+end cruise_control.impl;
+
+system implementation cc_app.impl
+	subcomponents
+        LANE_CAMERA: device lane_camera;
+        CC: system cruise_control.impl;
+        OD: device operator_display;
+        SPEAKER: device speaker;
+        BRAKE: device brake_pedal;
+        TA: device throttle_actuator;
+        SW: device steering_wheel;
+        CC_ON_OFF: device cruise_control_button;
+        ENGINE: device engine;
+        RESUME: device resume_button;
+        SP_UP: device speed_up_button;
+        SP_DN: device speed_dn_button;
+        SETBUTTON: device set_button;
+        WHEEL_ROT_SENSOR: device wheel_rotation_sensor;
+        RADAR: device radar_sensor;
+    connections
+        C21: port CC_ON_OFF.cc_system_on_off -> CC.cc_system_on_off;
+        C22: port BRAKE.brake_status -> CC.brake_status;
+        C23: port ENGINE.engine_status -> CC.engine_status;
+        C24: port RESUME.resume -> CC.resume;
+        C25: port SP_DN.decrease_speed -> CC.decrease_speed;
+        C26: port SP_UP.increase_speed -> CC.increase_speed;
+        C27: port SETBUTTON.set_speed -> CC.set_speed;
+        C28: port WHEEL_ROT_SENSOR.wheel_pulse -> CC.wheel_pulse;
+        C29: port CC.throttle_setting -> TA.throttle_setting;
+        C30: port LANE_CAMERA.lane_image -> CC.lane_image;
+        C31: port RADAR.distance_to_vehicle -> CC.radar_sensor;
+        C32: port CC.vibration_signal -> SW.vibration_motor;
+        C33: port CC.visual_signal -> OD.alert_image;
+        C34: port CC.auditory_signal -> SPEAKER.audio_alert;
+        C35: bus access LANE_CAMERA.busAccess -> device_bus;
+        C36: bus access OD.busAccess -> device_bus;
+        C37: bus access SPEAKER.busAccess -> device_bus;
+        C38: bus access BRAKE.busAccess -> device_bus;
+        C39: bus access SW.busAccess -> device_bus;
+        C40: bus access ENGINE.busAccess -> device_bus;
+        C41: bus access CC_ON_OFF.busAccess -> device_bus;
+        C42: bus access RESUME.busAccess -> device_bus;
+        C43: bus access SP_UP.busAccess -> device_bus;
+        C44: bus access SP_DN.busAccess -> device_bus;
+        C45: bus access SETBUTTON.busAccess -> device_bus;
+        C46: bus access RADAR.busAccess -> device_bus;
+        C47: bus access WHEEL_ROT_SENSOR.busAccess -> device_bus;
+        C48: bus access TA.busAccess -> device_bus;
+    flows
+        ETE_F1: end to end flow BRAKE.Flow1 -> C22 -> CC.brake_flow_1
+        -> C29 -> TA.Flow1
+        {
+            Latency => 300 Ms..300ms;
+        };
+        LaneCamera_To_steering_wheel: end to end flow LANE_CAMERA.Flow1 -> C30 -> CC.alert_flow_1 
+            -> C32 -> SW.Flow1  {
+            Latency => 100 Ms..100ms;
+        };
+        LaneCamera_To_Display: end to end flow LANE_CAMERA.Flow1 -> C30 -> CC.alert_flow_2 
+            -> C33 -> OD.Flow1  {
+            Latency => 100 Ms..100ms;
+        };
+        LaneCamera_To_speakers: end to end flow LANE_CAMERA.Flow1 -> C30 -> CC.alert_flow_3 
+            -> C34 -> SPEAKER.Flow1  {
+            Latency => 100 Ms..100ms;
+        };
+end cc_app.impl;
+
+
+system cc_computer
+
+features
+device_bus: provides bus access PC104_ISA_16BIT;
+end cc_computer;
+
+system AGH_cruise_control_system
+
+end AGH_cruise_control_system;
+
+system implementation cc_computer.AGH
+subcomponents
+
+AGH_memory: memory SDRAM;
+AGH_bus: bus PC104_ISA_16BIT;
+AGH_processor: processor PENTIUM;
+	connections
+
+C1: bus access AGH_bus -> AGH_memory.controller_memory;
+C2: bus access AGH_bus -> AGH_processor.controller_cpu;
+C3: bus access device_bus -> AGH_bus;
+	
+		
+end cc_computer.AGH;
+
+system implementation AGH_cruise_control_system.impl
+subcomponents
+AGH_computer: system cc_computer.AGH;
+AGH_software: system cc_app.impl;
+connections
+C1: bus access AGH_computer.device_bus ->
+AGH_software.device_bus;
+end AGH_cruise_control_system.impl;
+end cc;

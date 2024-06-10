@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="f388c12c-3554-4704-b165-950b15314c46" manual="true">
+    <element uuid="103c0fb5-f7b6-42dc-a89f-7df696086d53" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_bus</seg>
+      </bo>
+      <position x="240.36326599121094" y="68.33333333333334"/>
+      <size width="109.80598831176758" height="35.0"/>
+    </element>
+    <element uuid="90810f8a-b6ca-4701-ad5e-8f4c651183e4" manual="true">
+      <element uuid="9e4be696-63e7-488a-a4ca-4bf2c7846033" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_memory</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_memory</seg>
+      </bo>
+      <position x="370.1692657470703" y="38.0"/>
+      <size width="381.2669143676758" height="60.0"/>
+    </element>
+    <element uuid="63b033a5-a4cb-49d1-8455-0d5e4f8db5b8" manual="true">
+      <element uuid="b2848661-d762-4042-bb1b-edd854b11910" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_cpu</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_processor</seg>
+      </bo>
+      <position x="370.1692657470703" y="118.0"/>
+      <size width="338.35025787353516" height="60.0"/>
+    </element>
+    <element uuid="9a2eaa03-9e00-4c5b-ac2f-8f51dd973626" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C1 : cc_computer_AGH_Instance.AGH_bus -> cc_computer_AGH_Instance.AGH_memory.controller_memory</seg>
+      </bo>
+      <bendpoints>
+        <point x="350.16925048828125" y="80.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="3ca976bc-30a0-414e-8568-883cbac00154" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C2 : cc_computer_AGH_Instance.AGH_bus -> cc_computer_AGH_Instance.AGH_processor.controller_cpu</seg>
+      </bo>
+      <bendpoints>
+        <point x="354.16925048828125" y="91.66666412353516"/>
+        <point x="360.16925048828125" y="91.66666412353516"/>
+        <point x="360.16925048828125" y="160.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a34103a1-2f0d-40f3-8368-e094aaaf1712" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C3 : cc_computer_AGH_Instance.device_bus -> cc_computer_AGH_Instance.AGH_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="240.36326599121094" y="85.83333587646484"/>
+      </bendpoints>
+    </element>
+    <element uuid="a2b4cd1b-0ef5-4711-90d8-4448f0e8589b" manual="true" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>device_bus</seg>
+      </bo>
+      <position y="53.833333333333336"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_cc_computer_agh_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="842.8905944824219" height="190.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_cc_computer_agh_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,33 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+  Processor AGH_processor: Total MIPS 3,300 MIPS of bound tasks within MIPS capacity 5,000 MIPS of AGH_processor
+
+Memory Summary Report: 
+  Total RAM 6.0 KB of bound tasks within Memory capacity 4000000.0 KB of AGH_memory
+
+
+Detailed Workload Report:  for Processor AGH_processor with Capacity 5,000 MIPS
+
+Component,Budget,Actual
+process I_C, 0,500 MIPS,0,000 MIPS,process cruise_control_impl_Instance.I_C total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process C_V, 0,400 MIPS,0,000 MIPS,process cruise_control_impl_Instance.C_V total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+process C_D_S, 0,500 MIPS,0,000 MIPS,process cruise_control_impl_Instance.C_D_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process C_T_S, 0,500 MIPS,0,000 MIPS,process cruise_control_impl_Instance.C_T_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process ASC, 0,600 MIPS,0,000 MIPS,process cruise_control_impl_Instance.ASC total 0,000 MIPS below budget 0,600 MIPS (100,0 % slack)
+process LCM, 0,400 MIPS,0,000 MIPS,process cruise_control_impl_Instance.LCM total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+process LDDS, 0,400 MIPS,0,000 MIPS,process cruise_control_impl_Instance.LDDS total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+Total,,3,300 MIPS
+
+
+Detailed Workload Report:  for memory AGH_memory with Capacity 4000000,000 KBYTE
+
+Component,Budget,Actual
+RADAR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+LANE_CAMERA, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+LANE_WARNING, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+VIBRATION_MOTOR, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+AUDITORY_WARNING, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+VISUAL_ALERT, 1.0 KBytesps,1.0 KBytesps,No actual. Added budget to total.
+Total, ,6,000 KBYTE,

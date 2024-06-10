@@ -1,0 +1,4 @@
+Check connection binding consistency Report
+
+Warning! BRAKE.brake_status -> BRAKE_MANAGEMENT.brake_status: Connection source and/or destination is not bound to hardware
+Warning! BRAKE_MANAGEMENT.ok_to_run -> I_C.brake_status: Connection source and/or destination is not bound to hardware

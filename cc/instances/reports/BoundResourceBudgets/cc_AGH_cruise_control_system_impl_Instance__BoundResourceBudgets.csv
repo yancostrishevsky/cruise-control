@@ -1,0 +1,8 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+No application components bound to AGH_computer.AGH_processor with MIPS capacity 5,000 MIPS
+
+Memory Summary Report: 
+  No application components bound to AGH_computer.AGH_memory with RAM capacity 4000000,000 KBYTE

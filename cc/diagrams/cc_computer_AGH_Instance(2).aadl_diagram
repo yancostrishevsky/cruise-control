@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="c0201605-de9e-47bf-9b03-ab29e95b86a5" manual="true">
+    <element uuid="7b878fd1-6d02-4c4b-9a4f-36d70120bd1a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_bus</seg>
+      </bo>
+      <position x="91.45442199707031" y="70.0"/>
+      <size width="109.80598831176758" height="40.0"/>
+    </element>
+    <element uuid="e2324001-0d3e-46be-aef9-92f854d7a62f" manual="true">
+      <element uuid="5248b95d-0128-4609-bc74-6add484dd85e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_memory</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_memory</seg>
+      </bo>
+      <position x="231.26040649414062" y="118.0"/>
+      <size width="381.2669143676758" height="60.0"/>
+    </element>
+    <element uuid="76d93120-dd51-4d53-ba87-109ad2f1d179" manual="true">
+      <element uuid="33719fcf-1348-4c9f-8b44-b8f4b13c34ed" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_cpu</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_processor</seg>
+      </bo>
+      <position x="231.26040649414062" y="38.0"/>
+      <size width="338.35025787353516" height="60.0"/>
+    </element>
+    <element uuid="eacbba96-54f9-4298-8be4-ce9d69d892c4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C1 : cc_computer_AGH_Instance.AGH_bus -> cc_computer_AGH_Instance.AGH_memory.controller_memory</seg>
+      </bo>
+      <bendpoints>
+        <point x="205.26040649414062" y="90.0"/>
+        <point x="221.26040649414062" y="90.0"/>
+        <point x="221.26040649414062" y="160.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c5b2df9f-07cd-4ebf-b34a-94cd51b9133d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C2 : cc_computer_AGH_Instance.AGH_bus -> cc_computer_AGH_Instance.AGH_processor.controller_cpu</seg>
+      </bo>
+      <bendpoints>
+        <point x="201.26040649414062" y="80.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="6d98781f-918b-4ec1-b335-8ea032ea2046" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C3 : cc_computer_AGH_Instance.AGH_bus -> cc_computer_AGH_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="205.26040649414062" y="100.0"/>
+        <point x="211.26040649414062" y="100.0"/>
+        <point x="211.26040649414062" y="188.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a9831dfa-f471-471a-9d68-4d7c9c26c0dd" manual="true" dockArea="right">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>device_bus</seg>
+      </bo>
+      <position x="703.9817047119141" y="156.0"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_cc_computer_agh_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="783.4361267089844" height="208.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_cc_computer_agh_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

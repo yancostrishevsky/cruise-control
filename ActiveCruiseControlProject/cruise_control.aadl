@@ -169,7 +169,7 @@ end brake_management;
 
 
 -- Poprawiona deklaracja systemu in_control
-system in_control
+process in_control
 	features
 		cc_system_on_off: in data port Base_Types::Boolean;
 		brake_status: in data port Base_Types::Boolean;
@@ -223,7 +223,7 @@ end in_control;
 			SEI::RAMBudget => 1.0 KByte;
 	end compute_throttle_setting;
 
-	system active_cruise_control
+	process active_cruise_control
 		features
 			distance_to_vehicle: in data port float_type;
 			desired_speed: in data port float_type;
@@ -235,7 +235,7 @@ end in_control;
 			SEI::RAMBudget => 1.0 KByte;
 	end active_cruise_control;
 
-	system lane_control_module
+	process lane_control_module
 		features
 			lane_warning_signal: in data port bool_type;
 			lane_warning_output: out data port bool_type;
@@ -246,7 +246,7 @@ end in_control;
 			SEI::RAMBudget => 1.0 KByte;
 	end lane_control_module;
 
-	system lane_departure_detection_system
+	process lane_departure_detection_system
 		features
 			lane_image: in data port image_type;
 			lane_warning_signal: out data port bool_type;
@@ -303,13 +303,13 @@ system implementation cruise_control.impl
 	  WHEEL_ROT_SENSOR: device wheel_rotation_sensor;
 	  RESUME_BUTTON: device resume_button;
 	  CC_ON_OFF: device cruise_control_button;
-	  I_C: system in_control;
+	  I_C: process in_control;
 	  C_V: process compute_velocity;
 	  C_D_S: process compute_desired_speed;
 	  C_T_S: process compute_throttle_setting;
-	  ASC: system active_cruise_control;
-	  LCM: system lane_control_module;
-	  LDDS: system lane_departure_detection_system;
+	  ASC: process active_cruise_control;
+	  LCM: process lane_control_module;
+	  LDDS: process lane_departure_detection_system;
 	  RADAR: device radar_sensor;
 	  LANE_CAMERA: device lane_camera;
 	  LANE_WARNING: device lane_departure_warning_actuator;
@@ -334,10 +334,12 @@ system implementation cruise_control.impl
 	  C6: port SP_UP.increase_speed -> I_C.increase_speed;
 	  C8: port WHEEL_ROT_SENSOR.wheel_pulse -> C_V.wheel_pulse;
 	  C9: port I_C.ok_to_run -> C_D_S.ok_to_run;
+	  
 	  C10: port C_V.instantaneous_velocity -> C_D_S.instantaneous_velocity;
 	  C12: port C_D_S.desired_speed -> ASC.desired_speed;
 	  C13: port ASC.adjusted_speed -> C_T_S.desired_speed;
 	  C14: port C_T_S.throttle_setting -> TA.throttle_setting;
+	  
 	  C15: port RADAR.distance_to_vehicle -> ASC.distance_to_vehicle;
 	  C16: port LANE_CAMERA.lane_image -> LDDS.lane_image;
 	  C17: port LDDS.lane_warning_signal -> LCM.lane_warning_signal;

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="86a0d7a3-b419-4144-86ed-1557798d6c9a" manual="true">
+    <element uuid="abecee59-71e7-4a71-8097-0b82bc5d8a6d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_bus</seg>
+      </bo>
+      <position x="12.0" y="70.0"/>
+      <size width="109.80598831176758" height="40.0"/>
+    </element>
+    <element uuid="c6993860-2ff3-4861-b214-2d5f0e8002db" manual="true">
+      <element uuid="9aa15eec-cf94-4cd0-bde2-2270e57f2fb3" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_memory</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="1e117e8e-42e2-4fd6-971e-4e165f97b8d3" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_memory_2</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_memory</seg>
+      </bo>
+      <position x="141.8059844970703" y="168.0"/>
+      <size width="410.92838287353516" height="110.0"/>
+    </element>
+    <element uuid="f4cff26b-04a6-4128-a3f4-ec0e9ddc5c42" manual="true">
+      <element uuid="0871a543-42f7-46f4-b2c9-a4a7adc5269f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="7305d579-78fc-4a54-8fef-9482fcf7a376" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>controller_cpu</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_processor</seg>
+      </bo>
+      <position x="141.8059844970703" y="38.0"/>
+      <size width="338.35025787353516" height="110.0"/>
+    </element>
+    <element uuid="ac87d365-4ce6-4428-830e-9e7e8eb4d79d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C1 : AGH_cruise_control_system_AGH_Instance.AGH_bus -> AGH_cruise_control_system_AGH_Instance.AGH_memory.controller_memory</seg>
+      </bo>
+      <bendpoints>
+        <point x="125.80598449707031" y="100.0"/>
+        <point x="131.8059844970703" y="100.0"/>
+        <point x="131.8059844970703" y="210.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="e574de4b-4845-441b-a3c3-e1191daf163e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C2 : AGH_cruise_control_system_AGH_Instance.AGH_bus -> AGH_cruise_control_system_AGH_Instance.AGH_processor.controller_cpu</seg>
+      </bo>
+      <bendpoints>
+        <point x="125.80598449707031" y="90.0"/>
+        <point x="131.8059844970703" y="90.0"/>
+        <point x="131.8059844970703" y="80.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ca568e4a-ae05-4c4b-89d5-9adb3aedfd46" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C3 : AGH_cruise_control_system_AGH_Instance.AGH_processor.controller_cpu -> AGH_cruise_control_system_AGH_Instance.AGH_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="121.80598449707031" y="80.0"/>
+      </bendpoints>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/activecruisecontrolproject/instances/cruise_control_agh_cruise_control_system_agh_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="564.734375" height="290.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/activecruisecontrolproject/instances/cruise_control_agh_cruise_control_system_agh_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,21 @@
+Check connection binding consistency Report
+
+Warning! CDST.current_instantaneous_velocity -> CDST.previous_instantaneous_velocity: Connection source and/or destination is not bound to hardware
+Warning! I_C.ICT.ok_to_run -> C_D_S.CDST.ok_to_run: Connection source and/or destination is not bound to hardware
+Warning! C_V.CVT.instantaneous_velocity -> C_D_S.CDST.instantaneous_velocity: Connection source and/or destination is not bound to hardware
+Warning! C_D_S.CDST.desired_speed -> C_T_S.CTST.desired_speed: Connection source and/or destination is not bound to hardware
+Warning! LDDS.LDDST.lane_warning_signal -> LCM.LCMT.lane_warning_signal: Connection source and/or destination is not bound to hardware
+Warning! LANE_CAMERA.lane_image -> CC.LDDS.LDDST.lane_image: Connection source and/or destination is not bound to hardware
+Warning! BRAKE.brake_status -> CC.I_C.ICT.brake_status: Connection source and/or destination is not bound to hardware
+Warning! CC_ON_OFF.cc_system_on_off -> CC.I_C.ICT.cc_system_on_off: Connection source and/or destination is not bound to hardware
+Warning! ENGINE.engine_status -> CC.I_C.ICT.engine_status: Connection source and/or destination is not bound to hardware
+Warning! RESUME.resume -> CC.I_C.ICT.resume: Connection source and/or destination is not bound to hardware
+Warning! SP_UP.increase_speed -> CC.I_C.ICT.increase_speed: Connection source and/or destination is not bound to hardware
+Warning! SP_DN.decrease_speed -> CC.I_C.ICT.decrease_speed: Connection source and/or destination is not bound to hardware
+Warning! SETBUTTON.set_speed -> CC.I_C.ICT.set_speed: Connection source and/or destination is not bound to hardware
+Warning! WHEEL_ROT_SENSOR.wheel_pulse -> CC.C_V.CVT.wheel_pulse: Connection source and/or destination is not bound to hardware
+Warning! RADAR.distance_to_vehicle -> CC.C_D_S.CDST.distance_to_vehicle: Connection source and/or destination is not bound to hardware
+Warning! CC.C_T_S.CTST.throttle_setting -> TA.throttle_setting: Connection source and/or destination is not bound to hardware
+Warning! CC.LCM.LCMT.lane_warning_output -> SW.vibration_motor: Connection source and/or destination is not bound to hardware
+Warning! CC.LCM.LCMT.lane_warning_output -> SPEAKER.audio_alert: Connection source and/or destination is not bound to hardware
+Warning! CC.LCM.LCMT.lane_warning_output -> OD.alert_image: Connection source and/or destination is not bound to hardware

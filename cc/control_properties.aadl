@@ -1,0 +1,7 @@
+property set control_properties is
+    actuator_voltage_range: range of control_properties::dc_voltage
+    applies to (data port);
+    dc_voltage_units: type units (mV, V => mV * 1000);
+    dc_voltage: type aadlreal 0.0 V .. 15.0 V units
+    control_properties::dc_voltage_units;
+end control_properties;

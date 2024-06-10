@@ -1,0 +1,25 @@
+Weight totals Report
+
+Warning! AGH_bus: [L] No net weight plus subcomponent weight or no gross weight
+Warning! CAN_bus: [L] No net weight plus subcomponent weight or no gross weight
+Warning! ENGINE: [L] No net weight plus subcomponent weight or no gross weight
+Warning! BRAKE: [L] No net weight plus subcomponent weight or no gross weight
+Warning! SP_UP: [L] No net weight plus subcomponent weight or no gross weight
+Warning! SP_DN: [L] No net weight plus subcomponent weight or no gross weight
+Warning! TA: [L] No net weight plus subcomponent weight or no gross weight
+Warning! WHEEL_ROT_SENSOR: [L] No net weight plus subcomponent weight or no gross weight
+Warning! RESUME_BUTTON: [L] No net weight plus subcomponent weight or no gross weight
+Warning! CC_ON_OFF: [L] No net weight plus subcomponent weight or no gross weight
+Warning! RADAR: [L] No net weight plus subcomponent weight or no gross weight
+Warning! LANE_CAMERA: [L] No net weight plus subcomponent weight or no gross weight
+Warning! LANE_WARNING: [L] No net weight plus subcomponent weight or no gross weight
+Warning! VIBRATION_MOTOR: [L] No net weight plus subcomponent weight or no gross weight
+Warning! AUDITORY_WARNING: [L] No net weight plus subcomponent weight or no gross weight
+Warning! VISUAL_ALERT: [L] No net weight plus subcomponent weight or no gross weight
+Warning! AGH_memory: [L] No net weight plus subcomponent weight or no gross weight
+Warning! AGH_processor: [L] No net weight plus subcomponent weight or no gross weight
+Warning! I_C: [L] No net weight plus subcomponent weight or no gross weight
+Warning! ASC: [L] No net weight plus subcomponent weight or no gross weight
+Warning! LCM: [L] No net weight plus subcomponent weight or no gross weight
+Warning! LDDS: [L] No net weight plus subcomponent weight or no gross weight
+Warning! cruise_control_impl_Instance: [L] No net weight plus subcomponent weight or no gross weight

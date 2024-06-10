@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
+  <instance:SystemInstance name="in_control_impl_Instance" category="process">
+    <featureInstance name="cc_system_on_off">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="brake_status" type="/1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="16">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="resume">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="decrease_speed">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="increase_speed">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="set_speed">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.5"/>
+    </featureInstance>
+    <featureInstance name="engine_status">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.6"/>
+    </featureInstance>
+    <featureInstance name="ok_to_run" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedDataPort.7"/>
+    </featureInstance>
+    <componentInstance name="ICT" category="thread">
+      <featureInstance name="cc_system_on_off">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.0"/>
+      </featureInstance>
+      <featureInstance name="brake_status" type="/1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="16">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.1"/>
+      </featureInstance>
+      <featureInstance name="resume">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.2"/>
+      </featureInstance>
+      <featureInstance name="decrease_speed">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.3"/>
+      </featureInstance>
+      <featureInstance name="increase_speed">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.4"/>
+      </featureInstance>
+      <featureInstance name="set_speed">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.5"/>
+      </featureInstance>
+      <featureInstance name="engine_status">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.6"/>
+      </featureInstance>
+      <featureInstance name="ok_to_run" direction="out">
+        <feature xsi:type="aadl2:DataPort" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedDataPort.7"/>
+      </featureInstance>
+      <flowSpecification name="FS1" source="/0/@componentInstance.0/@featureInstance.1" destination="/0/@componentInstance.0/@featureInstance.7">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="30">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="30">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+              </maximum>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedFlowSpecification.0/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <flowSpecification href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.44/@ownedFlowSpecification.0"/>
+      </flowSpecification>
+      <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedThreadSubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:ThreadType" href="../cc.aadl#cc.in_control_thread"/>
+    </componentInstance>
+    <flowSpecification name="FS1" source="/0/@featureInstance.1" destination="/0/@featureInstance.7">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Latency"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="30">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="30">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedFlowSpecification.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <flowSpecification href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.42/@ownedFlowSpecification.0"/>
+    </flowSpecification>
+    <connectionInstance name="cc_system_on_off -> ICT.cc_system_on_off" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.0" source="/0/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@featureInstance.0" destination="/0/@componentInstance.0/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="brake_status -> ICT.brake_status" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.1" source="/0/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@featureInstance.1" destination="/0/@componentInstance.0/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.1"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="resume -> ICT.resume" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.2" source="/0/@featureInstance.2">
+      <connectionReference context="/0" source="/0/@featureInstance.2" destination="/0/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.2"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="decrease_speed -> ICT.decrease_speed" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.3" source="/0/@featureInstance.3">
+      <connectionReference context="/0" source="/0/@featureInstance.3" destination="/0/@componentInstance.0/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="increase_speed -> ICT.increase_speed" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.4" source="/0/@featureInstance.4">
+      <connectionReference context="/0" source="/0/@featureInstance.4" destination="/0/@componentInstance.0/@featureInstance.4">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="set_speed -> ICT.set_speed" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.5" source="/0/@featureInstance.5">
+      <connectionReference context="/0" source="/0/@featureInstance.5" destination="/0/@componentInstance.0/@featureInstance.5">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="engine_status -> ICT.engine_status" kind="portConnection" destination="/0/@componentInstance.0/@featureInstance.6" source="/0/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@featureInstance.6" destination="/0/@componentInstance.0/@featureInstance.6">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.6"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="ICT.ok_to_run -> ok_to_run" kind="portConnection" destination="/0/@featureInstance.7" source="/0/@componentInstance.0/@featureInstance.7">
+      <connectionReference context="/0" source="/0/@componentInstance.0/@featureInstance.7" destination="/0/@featureInstance.7">
+        <connection xsi:type="aadl2:PortConnection" href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.43/@ownedPortConnection.7"/>
+      </connectionReference>
+    </connectionInstance>
+    <classifier xsi:type="aadl2:ProcessImplementation" href="../cc.aadl#cc.in_control.impl"/>
+    <systemOperationMode name="No Modes"/>
+    <componentImplementation xsi:type="aadl2:ProcessImplementation" href="../cc.aadl#cc.in_control.impl"/>
+  </instance:SystemInstance>
+  <instance:ComponentInstance name="cc::bool_type" category="data">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="16">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../cc.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <classifier xsi:type="aadl2:DataType" href="../cc.aadl#cc.bool_type"/>
+  </instance:ComponentInstance>
+</xmi:XMI>

@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="808b7a72-ba1e-4961-97ef-e3c5cc4313da" manual="true">
+    <element uuid="1c3a4d18-83a4-4908-ac2a-51641306a23e" manual="true">
+      <element uuid="9f2b409f-acbf-44bd-96f5-a2f095140519" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>brake_status</seg>
+        </bo>
+        <position x="200.68228149414062" y="38.0"/>
+      </element>
+      <element uuid="8accc3c6-d017-4e3e-a5fb-5a0cf97ba47d" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="212.55076599121094" y="98.0"/>
+      </element>
+      <element uuid="e39aebf4-aed3-46bd-bd7f-3357dc21195d" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>Flow1</seg>
+        </bo>
+        <position x="100.34114074707031" y="70.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>BRAKE</seg>
+      </bo>
+      <position x="174.10160064697266" y="38.0"/>
+      <size width="289.02342224121094" height="150.0"/>
+    </element>
+    <element uuid="242e5c70-4662-4d1f-95e0-e9e87edfe3fd" manual="true">
+      <element uuid="35c71cdf-281f-4a20-bb22-ae1ac7ff64fc" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>auditory_signal</seg>
+        </bo>
+        <position x="437.76173400878906" y="38.0"/>
+      </element>
+      <element uuid="190b9bbf-ef48-48c5-a763-5c21ec65f5f6" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>brake_status</seg>
+        </bo>
+        <position y="198.0"/>
+      </element>
+      <element uuid="77e4c7d6-abfb-49b6-8c99-2058de08fc7a" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>cc_system_on_off</seg>
+        </bo>
+        <position y="678.0"/>
+      </element>
+      <element uuid="5905afa1-470d-40a8-ab5a-f40538391024" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>decrease_speed</seg>
+        </bo>
+        <position y="558.0"/>
+      </element>
+      <element uuid="43c392bf-758c-41bb-88b3-81e46249fbf5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_status</seg>
+        </bo>
+        <position y="258.0"/>
+      </element>
+      <element uuid="29808db7-d205-41a3-aefa-54c637683c35" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>increase_speed</seg>
+        </bo>
+        <position y="318.0"/>
+      </element>
+      <element uuid="776c84eb-22f5-4687-8094-bda94a8ddc4c" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>lane_image</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <element uuid="4f8ff1a1-95d5-4f14-869d-a72b571bf565" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radar_sensor</seg>
+        </bo>
+        <position y="378.0"/>
+      </element>
+      <element uuid="8313fad3-8043-4639-8e09-eb095d729a60" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>resume</seg>
+        </bo>
+        <position y="498.0"/>
+      </element>
+      <element uuid="d17d6f91-2c98-49cc-a895-9a12b5454429" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>set_speed</seg>
+        </bo>
+        <position y="438.0"/>
+      </element>
+      <element uuid="8f5006fb-f6fc-4176-bd1b-047853b4ea62" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>throttle_setting</seg>
+        </bo>
+        <position x="439.9883041381836" y="198.0"/>
+      </element>
+      <element uuid="480ef964-7c77-4044-b52c-7f9fc9ba63d3" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>vibration_signal</seg>
+        </bo>
+        <position x="434.7995071411133" y="138.0"/>
+      </element>
+      <element uuid="9485f46c-ed2e-485a-8c40-6f4d8de6b1fe" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>visual_signal</seg>
+        </bo>
+        <position x="451.1081008911133" y="88.0"/>
+      </element>
+      <element uuid="9486bd05-457a-4151-a807-529eb9ec3183" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>wheel_pulse</seg>
+        </bo>
+        <position y="618.0"/>
+      </element>
+      <element uuid="0862c6b6-617a-41bd-911d-ad306d9509bc" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>alert_flow_1</seg>
+        </bo>
+        <bendpoints>
+          <point x="826.4635620117188" y="309.0"/>
+          <point x="826.4635620117188" y="409.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="5cc6d482-bd07-4a7b-b423-a54de0be89de" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>alert_flow_2</seg>
+        </bo>
+        <bendpoints>
+          <point x="826.4635620117188" y="309.0"/>
+          <point x="826.4635620117188" y="359.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="32660c7d-7d5b-4637-bacf-8d2c1da7aea1" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>alert_flow_3</seg>
+        </bo>
+      </element>
+      <element uuid="82cb8a2b-7891-43e2-9f26-80c0a7b82e78" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>brake_flow_1</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>CC</seg>
+      </bo>
+      <position x="533.1250152587891" y="239.0"/>
+      <size width="539.4492492675781" height="730.0"/>
+    </element>
+    <element uuid="0628e585-cc36-4042-9867-850555b2a55d" manual="true">
+      <element uuid="114a11da-5d00-4561-a400-813f3930daec" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="295.1979446411133" y="60.0"/>
+      </element>
+      <element uuid="3aebbe03-76ac-45ff-8e57-d1a1611d2f65" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>cc_system_on_off</seg>
+        </bo>
+        <position x="252.20964813232422" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>CC_ON_OFF</seg>
+      </bo>
+      <position x="91.45442199707031" y="1407.0"/>
+      <size width="371.6706008911133" height="110.0"/>
+    </element>
+    <element uuid="ab5e9b0e-f2c3-4711-9637-4e6c77dfac70" manual="true">
+      <element uuid="280f6f43-e72b-460e-88fd-66f62d0eafae" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="216.70182037353516" y="10.0"/>
+      </element>
+      <element uuid="73525efb-2132-42b0-b0da-e70c82f1640c" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_status</seg>
+        </bo>
+        <position x="198.14713287353516" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>ENGINE</seg>
+      </bo>
+      <position x="169.95054626464844" y="669.0"/>
+      <size width="293.17447662353516" height="110.0"/>
+    </element>
+    <element uuid="ebd598fe-3a66-4c26-a986-9484b870d134" manual="true">
+      <element uuid="02e1b616-dde5-42f7-a9d0-23354c8b3554" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="236.69529724121094" y="98.0"/>
+      </element>
+      <element uuid="5f2026dc-f889-4927-aa7c-ff8731f34ee5" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>lane_image</seg>
+        </bo>
+        <position x="232.22915649414062" y="38.0"/>
+      </element>
+      <element uuid="cb018392-83a1-42a2-b733-485f45bbfac4" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>Flow1</seg>
+        </bo>
+        <position x="92.93879699707031" y="70.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>LANE_CAMERA</seg>
+      </bo>
+      <position x="149.95706939697266" y="239.0"/>
+      <size width="313.16795349121094" height="150.0"/>
+    </element>
+    <element uuid="c1b51f1a-8d17-4a4c-aa62-29f3e39dc8d4" manual="true">
+      <element uuid="58ffc1e9-a7a9-4cb2-875a-5699bb8534c4" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>alert_image</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <element uuid="d006a83a-0d4b-42a7-b2c6-746f6f0c7b0b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="360.6718444824219" y="38.0"/>
+      </element>
+      <element uuid="855567bd-9fcb-49e5-a6da-23412d8748cb" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>Flow1</seg>
+        </bo>
+        <position x="247.0038833618164" y="70.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>OD</seg>
+      </bo>
+      <position x="1147.0274353027344" y="289.0"/>
+      <size width="437.1445007324219" height="90.0"/>
+    </element>
+    <element uuid="ac88b284-eb7b-44c9-9cfc-66f1cb7d9974" manual="true">
+      <element uuid="bcf5351e-6f0e-4214-a23c-52a9f296ae71" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="280.43230056762695" y="10.0"/>
+      </element>
+      <element uuid="79d1009a-e7ce-4bc8-819d-73b092ea2756" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>distance_to_vehicle</seg>
+        </bo>
+        <position x="227.78906631469727" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>RADAR</seg>
+      </bo>
+      <position x="106.22006607055664" y="409.0"/>
+      <size width="356.90495681762695" height="110.0"/>
+    </element>
+    <element uuid="1b991e49-49e5-4d62-a540-6a755059d3df" manual="true">
+      <element uuid="8bbada39-93ac-46cc-a30b-390c5826c8e0" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="185.5169219970703" y="60.0"/>
+      </element>
+      <element uuid="20258eef-4bd5-4a2d-a27e-cad9ded1cab1" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>resume</seg>
+        </bo>
+        <position x="205.52994537353516" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>RESUME</seg>
+      </bo>
+      <position x="201.13544464111328" y="1017.0"/>
+      <size width="261.9895782470703" height="110.0"/>
+    </element>
+    <element uuid="ed5df32b-9228-4de7-bddb-e2b702d21362" manual="true">
+      <element uuid="823fbab5-7e06-4d88-a431-61c62e544ebc" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="209.21484375" y="60.0"/>
+      </element>
+      <element uuid="af4c3722-640a-40c2-974f-bfc75162d76e" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>set_speed</seg>
+        </bo>
+        <position x="212.15755462646484" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>SETBUTTON</seg>
+      </bo>
+      <position x="177.4375228881836" y="1147.0"/>
+      <size width="285.6875" height="110.0"/>
+    </element>
+    <element uuid="8f01058a-36c7-441e-b27a-b453c1be9492" manual="true">
+      <element uuid="4dcc3990-11a2-42b8-8aad-9aa46f709fd5" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="241.17449188232422" y="60.0"/>
+      </element>
+      <element uuid="3ec874cd-986b-4d14-9fb7-960b4351c46b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>decrease_speed</seg>
+        </bo>
+        <position x="207.0533905029297" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>SP_DN</seg>
+      </bo>
+      <position x="145.47787475585938" y="1277.0"/>
+      <size width="317.6471481323242" height="110.0"/>
+    </element>
+    <element uuid="5fa52960-64bf-4c4e-935c-78499f6ba031" manual="true">
+      <element uuid="fcd8951a-9516-4b43-b9d8-b1fe0c97c8ec" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="231.53256225585938" y="10.0"/>
+      </element>
+      <element uuid="cb58711e-30e4-4ae5-b98d-a6e572c4069b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>increase_speed</seg>
+        </bo>
+        <position x="201.86458587646484" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>SP_UP</seg>
+      </bo>
+      <position x="155.11980438232422" y="539.0"/>
+      <size width="308.0052185058594" height="110.0"/>
+    </element>
+    <element uuid="72327e4d-8d0e-47a0-b170-0081b1cf19aa" manual="true">
+      <element uuid="d5f185de-82e7-4e36-b5c2-e4c5878c99c9" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>audio_alert</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <element uuid="0eab7818-0c9a-446d-a4f1-cf2adab24ea9" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="345.90625" y="38.0"/>
+      </element>
+      <element uuid="b814cea3-d5a2-45de-b8bf-8bb0a61a2510" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>Flow1</seg>
+        </bo>
+        <position x="235.9296875" y="70.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>SPEAKER</seg>
+      </bo>
+      <position x="1154.4102325439453" y="179.0"/>
+      <size width="422.37890625" height="90.0"/>
+    </element>
+    <element uuid="b932aa60-b5d2-4ce8-ac16-becea6f0463b" manual="true">
+      <element uuid="a6ed9c76-3acc-400a-82f9-d5c5836e580b" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="449.578125" y="38.0"/>
+      </element>
+      <element uuid="e0795765-87c3-4d3f-b9f2-e4d0ad3f1ce5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>vibration_motor</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <element uuid="aa263d93-2e1c-4ca2-b426-7fcd099e929d" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>Flow1</seg>
+        </bo>
+        <position x="313.68359375" y="70.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>SW</seg>
+      </bo>
+      <position x="1102.5742950439453" y="399.0"/>
+      <size width="526.05078125" height="90.0"/>
+    </element>
+    <element uuid="60b9a9d7-27e3-4561-8a04-ecd9640ad93d" manual="true">
+      <element uuid="f1389a15-e62d-4f48-b6da-3572a62b7fd3" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="431.8437805175781" y="38.0"/>
+      </element>
+      <element uuid="a5020199-871b-48a0-b153-66a9e5a36ecc" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>throttle_setting</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <element uuid="47116638-2ef7-4a38-a04b-2d6d5449f687" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>flow_specification_instance</seg>
+          <seg>Flow1</seg>
+        </bo>
+        <position x="300.3828353881836" y="70.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>TA</seg>
+      </bo>
+      <position x="1111.4414672851562" y="509.0"/>
+      <size width="508.3164367675781" height="90.0"/>
+    </element>
+    <element uuid="124705ea-1692-40cc-a83f-df301e929278" manual="true">
+      <element uuid="a906ab23-6058-4fb9-b827-f51bffe09f38" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>busAccess</seg>
+        </bo>
+        <position x="294.48175048828125" y="60.0"/>
+      </element>
+      <element uuid="2bcc884d-acaf-4092-9215-28cf3c9cdd6f" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>wheel_pulse</seg>
+        </bo>
+        <position x="284.8268127441406" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>WHEEL_ROT_SENSOR</seg>
+      </bo>
+      <position x="92.17061614990234" y="887.0"/>
+      <size width="370.95440673828125" height="110.0"/>
+    </element>
+    <element uuid="381e63db-68a0-48b9-bcde-8c5b2d3663c3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C21 : cc_app_impl_Instance.CC_ON_OFF.cc_system_on_off -> cc_app_impl_Instance.CC.cc_system_on_off</seg>
+      </bo>
+      <bendpoints>
+        <point x="523.125" y="1449.0"/>
+        <point x="523.125" y="949.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="40e5a8b7-9a9f-49b6-8c58-a17602404277" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C22 : cc_app_impl_Instance.BRAKE.brake_status -> cc_app_impl_Instance.CC.brake_status</seg>
+      </bo>
+      <bendpoints>
+        <point x="483.125" y="108.0"/>
+        <point x="483.125" y="469.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b4265575-1da7-4a78-b6ac-f2988238945b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C23 : cc_app_impl_Instance.ENGINE.engine_status -> cc_app_impl_Instance.CC.engine_status</seg>
+      </bo>
+      <bendpoints>
+        <point x="483.125" y="761.0"/>
+        <point x="483.125" y="529.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="572d6eea-a4ad-41a8-a8dc-7b4c4ec7305e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C24 : cc_app_impl_Instance.RESUME.resume -> cc_app_impl_Instance.CC.resume</seg>
+      </bo>
+      <bendpoints>
+        <point x="473.125" y="1059.0"/>
+        <point x="473.125" y="769.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ca56dc9f-255b-4749-8298-e086319f9598" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C25 : cc_app_impl_Instance.SP_DN.decrease_speed -> cc_app_impl_Instance.CC.decrease_speed</seg>
+      </bo>
+      <bendpoints>
+        <point x="513.125" y="1319.0"/>
+        <point x="513.125" y="829.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="8e39f0fa-c6dd-4908-bfc5-f53f3b30f591" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C26 : cc_app_impl_Instance.SP_UP.increase_speed -> cc_app_impl_Instance.CC.increase_speed</seg>
+      </bo>
+      <bendpoints>
+        <point x="493.125" y="631.0"/>
+        <point x="493.125" y="589.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="dcc5f29b-2482-4098-989c-5c6f117f8f56" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C27 : cc_app_impl_Instance.SETBUTTON.set_speed -> cc_app_impl_Instance.CC.set_speed</seg>
+      </bo>
+      <bendpoints>
+        <point x="493.125" y="1189.0"/>
+        <point x="493.125" y="709.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="8811b5ff-c0d3-4aef-8989-6b858cd03a7b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C28 : cc_app_impl_Instance.WHEEL_ROT_SENSOR.wheel_pulse -> cc_app_impl_Instance.CC.wheel_pulse</seg>
+      </bo>
+      <bendpoints>
+        <point x="523.125" y="929.0"/>
+        <point x="523.125" y="889.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="afaa9477-c7d5-41df-8260-b047d07117db" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C29 : cc_app_impl_Instance.CC.throttle_setting -> cc_app_impl_Instance.TA.throttle_setting</seg>
+      </bo>
+      <bendpoints>
+        <point x="1082.5743408203125" y="469.0"/>
+        <point x="1082.5743408203125" y="579.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ff079db6-081c-4b9d-aa7d-20a58ad7ab4d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C30 : cc_app_impl_Instance.LANE_CAMERA.lane_image -> cc_app_impl_Instance.CC.lane_image</seg>
+      </bo>
+    </element>
+    <element uuid="d592771d-94e1-4676-a79d-74170ec5b610" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C31 : cc_app_impl_Instance.RADAR.distance_to_vehicle -> cc_app_impl_Instance.CC.radar_sensor</seg>
+      </bo>
+      <bendpoints>
+        <point x="503.125" y="501.0"/>
+        <point x="503.125" y="649.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="22002bad-9bd6-43da-8a59-6e73cb1404f2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C32 : cc_app_impl_Instance.CC.vibration_signal -> cc_app_impl_Instance.SW.vibration_motor</seg>
+      </bo>
+      <bendpoints>
+        <point x="1092.5743408203125" y="409.0"/>
+        <point x="1092.5743408203125" y="469.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="4f8560ae-161a-4b9b-98d2-53e7596aaddc" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C33 : cc_app_impl_Instance.CC.visual_signal -> cc_app_impl_Instance.OD.alert_image</seg>
+      </bo>
+    </element>
+    <element uuid="79e8db93-1ddd-4a9f-9536-a03350737c29" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C34 : cc_app_impl_Instance.CC.auditory_signal -> cc_app_impl_Instance.SPEAKER.audio_alert</seg>
+      </bo>
+      <bendpoints>
+        <point x="1082.5743408203125" y="309.0"/>
+        <point x="1082.5743408203125" y="249.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c98c98d5-af6c-47e8-bc1c-ca294e747362" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C35 : cc_app_impl_Instance.LANE_CAMERA.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="473.125" y="369.0"/>
+        <point x="473.125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="08a346f9-e134-4cc5-8056-dd767663f70c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C36 : cc_app_impl_Instance.OD.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1638.6251220703125" y="359.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="2ec7f68e-7b63-4a47-8bf0-d723b03981db" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C37 : cc_app_impl_Instance.SPEAKER.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1638.6251220703125" y="249.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="35e388bb-f87f-4065-8231-1d3919c1e681" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C38 : cc_app_impl_Instance.BRAKE.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+    </element>
+    <element uuid="66dddf3c-5788-4bb5-acbb-64ef6977dca5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C39 : cc_app_impl_Instance.SW.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1638.6251220703125" y="469.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="77a22256-6a88-4d4e-9ade-e4af06abb7a7" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C40 : cc_app_impl_Instance.ENGINE.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="473.125" y="711.0"/>
+        <point x="473.125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="13f33556-1f2f-487a-b525-6b2f02791577" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C41 : cc_app_impl_Instance.CC_ON_OFF.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="503.125" y="1499.0"/>
+        <point x="503.125" y="979.0"/>
+        <point x="1638.6251220703125" y="979.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b76f1574-d3cb-4038-83ee-a7ab4cdbc22c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C42 : cc_app_impl_Instance.RESUME.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="503.125" y="1109.0"/>
+        <point x="503.125" y="979.0"/>
+        <point x="1638.6251220703125" y="979.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="fc8737a6-f23c-470b-a2c6-149b26567e03" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C43 : cc_app_impl_Instance.SP_UP.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="473.125" y="581.0"/>
+        <point x="473.125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="61090649-9ecf-4941-baca-bc5ac2c16558" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C44 : cc_app_impl_Instance.SP_DN.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="503.125" y="1369.0"/>
+        <point x="503.125" y="979.0"/>
+        <point x="1638.6251220703125" y="979.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="efb492fc-ad8f-43ed-af35-8b188b24b6e4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C45 : cc_app_impl_Instance.SETBUTTON.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="503.125" y="1239.0"/>
+        <point x="503.125" y="979.0"/>
+        <point x="1638.6251220703125" y="979.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="28a24be0-fc59-4b34-b993-86ceaaf41024" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C46 : cc_app_impl_Instance.RADAR.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="473.125" y="451.0"/>
+        <point x="473.125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a3abbf3b-7d68-46fb-ae00-badcc42d23d2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C47 : cc_app_impl_Instance.WHEEL_ROT_SENSOR.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1638.6251220703125" y="979.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ced10f70-1fe5-43d9-82dd-7ae3bfa603a5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C48 : cc_app_impl_Instance.TA.busAccess -> cc_app_impl_Instance.device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1638.6251220703125" y="579.0"/>
+        <point x="1638.6251220703125" y="168.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="64ba4895-ac4d-4ab0-a963-eb29718a967d" manual="true" dockArea="right">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>device_bus</seg>
+      </bo>
+      <position x="1740.0795440673828" y="136.0"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_cc_app_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="1819.5339660644531" height="1529.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_cc_app_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

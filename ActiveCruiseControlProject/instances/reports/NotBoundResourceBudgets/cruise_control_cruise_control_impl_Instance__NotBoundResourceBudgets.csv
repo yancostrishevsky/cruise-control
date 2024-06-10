@@ -1,0 +1,81 @@
+Not Bound Resource Budget Analysis Report
+
+Resource Summary: 
+**   System cruise_control_impl_Instance budgets over capacity: MIPS capacity 5,000 MIPS : MIPS budget 6,100 MIPS
+  1 out of 1 with MIPS capacity
+  22 out of 22 with MIPS budget
+
+  RAM capacity 4000000,000 KBYTE : RAM budget 22,000 KBYTE
+  2 out of 2 with RAM capacity
+  22 out of 22 with RAM budget
+
+
+
+Detailed Processor MIPS Capacity Report 
+
+Component,Capacity
+processor AGH_processor, 5,000 MIPS,
+Total, 5,000 MIPS,
+
+
+Detailed MIPS Budget Report 
+
+Component,Budget,Actual,Notes
+device ENGINE, 0,100 MIPS,0,000 MIPS,device cruise_control_impl_Instance.ENGINE total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device BRAKE, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.BRAKE total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device SP_UP, 0,100 MIPS,0,000 MIPS,device cruise_control_impl_Instance.SP_UP total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device SP_DN, 0,100 MIPS,0,000 MIPS,device cruise_control_impl_Instance.SP_DN total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device TA, 0,300 MIPS,0,000 MIPS,device cruise_control_impl_Instance.TA total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+device WHEEL_ROT_SENSOR, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.WHEEL_ROT_SENSOR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device RESUME_BUTTON, 0,100 MIPS,0,000 MIPS,device cruise_control_impl_Instance.RESUME_BUTTON total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device CC_ON_OFF, 0,100 MIPS,0,000 MIPS,device cruise_control_impl_Instance.CC_ON_OFF total 0,000 MIPS below budget 0,100 MIPS (100,0 % slack)
+device RADAR, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.RADAR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device LANE_CAMERA, 0,300 MIPS,0,000 MIPS,device cruise_control_impl_Instance.LANE_CAMERA total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+device LANE_WARNING, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.LANE_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device VIBRATION_MOTOR, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.VIBRATION_MOTOR total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device AUDITORY_WARNING, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.AUDITORY_WARNING total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+device VISUAL_ALERT, 0,200 MIPS,0,000 MIPS,device cruise_control_impl_Instance.VISUAL_ALERT total 0,000 MIPS below budget 0,200 MIPS (100,0 % slack)
+process I_C, 0,500 MIPS,0,000 MIPS,process cruise_control_impl_Instance.I_C total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process C_V, 0,400 MIPS,0,000 MIPS,process cruise_control_impl_Instance.C_V total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+process C_D_S, 0,500 MIPS,0,000 MIPS,process cruise_control_impl_Instance.C_D_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process C_T_S, 0,500 MIPS,0,000 MIPS,process cruise_control_impl_Instance.C_T_S total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process ASC, 0,600 MIPS,0,000 MIPS,process cruise_control_impl_Instance.ASC total 0,000 MIPS below budget 0,600 MIPS (100,0 % slack)
+process LCM, 0,400 MIPS,0,000 MIPS,process cruise_control_impl_Instance.LCM total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+process LDDS, 0,400 MIPS,0,000 MIPS,process cruise_control_impl_Instance.LDDS total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+process BRAKE_MANAGEMENT, 0,300 MIPS,0,000 MIPS,process cruise_control_impl_Instance.BRAKE_MANAGEMENT total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+Total, ,6,100 MIPS,
+
+
+Detailed RAM Capacity Report 
+
+Component,Capacity
+memory AGH_memory, 4000000,000 KBYTE,
+Total, 4000000,000 KBYTE,
+
+
+Detailed RAM Budget Report 
+
+Component,Budget,Actual,Notes
+device ENGINE, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.ENGINE total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device BRAKE, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.BRAKE total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device SP_UP, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.SP_UP total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device SP_DN, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.SP_DN total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device TA, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.TA total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device WHEEL_ROT_SENSOR, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.WHEEL_ROT_SENSOR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device RESUME_BUTTON, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.RESUME_BUTTON total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device CC_ON_OFF, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.CC_ON_OFF total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device RADAR, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.RADAR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device LANE_CAMERA, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.LANE_CAMERA total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device LANE_WARNING, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.LANE_WARNING total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device VIBRATION_MOTOR, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.VIBRATION_MOTOR total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device AUDITORY_WARNING, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.AUDITORY_WARNING total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+device VISUAL_ALERT, 1,000 KBYTE,0,000 KBYTE,device cruise_control_impl_Instance.VISUAL_ALERT total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process I_C, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.I_C total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process C_V, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.C_V total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process C_D_S, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.C_D_S total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process C_T_S, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.C_T_S total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process ASC, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.ASC total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process LCM, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.LCM total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process LDDS, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.LDDS total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+process BRAKE_MANAGEMENT, 1,000 KBYTE,0,000 KBYTE,process cruise_control_impl_Instance.BRAKE_MANAGEMENT total 0,000 KBYTE below budget 1,000 KBYTE (100,0 % slack)
+Total, ,22,000 KBYTE,

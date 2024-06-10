@@ -1,0 +1,80 @@
+Latency analysis with preference settings: asynchronous system/major partition frame/worst case as max compute execution time/best case as full queue min compute execution time/queuing latency enabled
+
+"Latency results for end-to-end flow 'ETE_F1' of system 'cc_app.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device BRAKE (source Flow1),30.0ms,30.0ms,specified,30.0ms,30.0ms,specified
+connection BRAKE.brake_status -> CC.I_C.ICT.brake_status,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.I_C.ICT (path FS1),30.0ms,30.0ms,specified,30.0ms,30.0ms,specified
+connection I_C.ICT.ok_to_run -> C_D_S.CDST.ok_to_run,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.C_D_S.CDST (path FS1),40.0ms,40.0ms,specified,40.0ms,40.0ms,specified
+connection C_D_S.CDST.desired_speed -> C_T_S.CTST.desired_speed,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.C_T_S.CTST (path FS1),50.0ms,50.0ms,specified,50.0ms,50.0ms,specified
+connection CC.C_T_S.CTST.throttle_setting -> TA.throttle_setting,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+device TA (sink Flow1),20.0ms,20.0ms,specified,20.0ms,20.0ms,specified
+Latency Total,170.0ms,170.0ms,,170.0ms,170.0ms
+Specified End To End Latency,,300.0ms,,,300.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 170,0ms less than expected minimum end to end latency 300,0ms (better response time)
+WARNING,Minimum actual latency total 170,0ms less than expected minimum end to end latency 300,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 170,0ms is less or equal to expected maximum end to end latency 300,0ms
+
+
+
+"Latency results for end-to-end flow 'LaneCamera_To_steering_wheel' of system 'cc_app.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device LANE_CAMERA (source Flow1),30.0ms,30.0ms,specified,30.0ms,30.0ms,specified
+connection LANE_CAMERA.lane_image -> CC.LDDS.LDDST.lane_image,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.LDDS.LDDST (path FS1),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+connection LDDS.LDDST.lane_warning_signal -> LCM.LCMT.lane_warning_signal,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.LCM.LCMT (path FS1),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+connection CC.LCM.LCMT.lane_warning_output -> SW.vibration_motor,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+device SW (sink Flow1),20.0ms,20.0ms,specified,20.0ms,20.0ms,specified
+Latency Total,50.0ms,50.0ms,,50.0ms,50.0ms
+Specified End To End Latency,,100.0ms,,,100.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 50,0ms less than expected minimum end to end latency 100,0ms (better response time)
+WARNING,Minimum actual latency total 50,0ms less than expected minimum end to end latency 100,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 50,0ms is less or equal to expected maximum end to end latency 100,0ms
+
+
+
+"Latency results for end-to-end flow 'LaneCamera_To_Display' of system 'cc_app.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device LANE_CAMERA (source Flow1),30.0ms,30.0ms,specified,30.0ms,30.0ms,specified
+connection LANE_CAMERA.lane_image -> CC.LDDS.LDDST.lane_image,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.LDDS.LDDST (path FS1),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+connection LDDS.LDDST.lane_warning_signal -> LCM.LCMT.lane_warning_signal,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.LCM.LCMT (path FS1),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+connection CC.LCM.LCMT.lane_warning_output -> OD.alert_image,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+device OD (sink Flow1),20.0ms,20.0ms,specified,20.0ms,20.0ms,specified
+Latency Total,50.0ms,50.0ms,,50.0ms,50.0ms
+Specified End To End Latency,,100.0ms,,,100.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 50,0ms less than expected minimum end to end latency 100,0ms (better response time)
+WARNING,Minimum actual latency total 50,0ms less than expected minimum end to end latency 100,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 50,0ms is less or equal to expected maximum end to end latency 100,0ms
+
+
+
+"Latency results for end-to-end flow 'LaneCamera_To_speakers' of system 'cc_app.impl' "
+
+Result,Min Specified,Min Actual,Min Method,Max Specified,Max Actual,Max Method,Comments
+device LANE_CAMERA (source Flow1),30.0ms,30.0ms,specified,30.0ms,30.0ms,specified
+connection LANE_CAMERA.lane_image -> CC.LDDS.LDDST.lane_image,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.LDDS.LDDST (path FS1),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+connection LDDS.LDDST.lane_warning_signal -> LCM.LCMT.lane_warning_signal,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+thread CC.LCM.LCMT (path FS1),0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+connection CC.LCM.LCMT.lane_warning_output -> SPEAKER.audio_alert,0.0ms,0.0ms,no sampling/queuing latency,0.0ms,0.0ms,no sampling/queuing latency
+device SPEAKER (sink Flow1),20.0ms,20.0ms,specified,20.0ms,20.0ms,specified
+Latency Total,50.0ms,50.0ms,,50.0ms,50.0ms
+Specified End To End Latency,,100.0ms,,,100.0ms
+End to end Latency Summary
+WARNING,Minimum specified flow latency total 50,0ms less than expected minimum end to end latency 100,0ms (better response time)
+WARNING,Minimum actual latency total 50,0ms less than expected minimum end to end latency 100,0ms (faster actual minimum response time)
+INFO,Maximum actual latency total 50,0ms is less or equal to expected maximum end to end latency 100,0ms
+
+
+

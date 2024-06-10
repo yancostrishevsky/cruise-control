@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="717a1c48-c31d-4845-b60b-86878440b9f3" manual="true">
+    <element uuid="3d346c8c-747d-4c46-862a-8b07e3121533" manual="true">
+      <element uuid="523e156d-2aae-4cab-a281-053fc05bd299" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>device_bus</seg>
+        </bo>
+        <position x="228.53125" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_computer</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="307.9856719970703" height="60.0"/>
+    </element>
+    <element uuid="f2692ddd-6f69-451e-9049-5086447d49a9" manual="true">
+      <element uuid="e3279cb8-c3ad-4ad1-aa11-00b8dd169410" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>device_bus</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>AGH_software</seg>
+      </bo>
+      <position x="339.98565673828125" y="38.0"/>
+      <size width="302.79686737060547" height="60.0"/>
+    </element>
+    <element uuid="ebab8833-9dcd-4410-92fd-8ef7df311183" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>C1 : AGH_cruise_control_system_impl_Instance.AGH_computer.device_bus -> AGH_cruise_control_system_impl_Instance.AGH_software.device_bus</seg>
+      </bo>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_agh_cruise_control_system_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="654.7825317382812" height="110.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/cc/instances/cc_agh_cruise_control_system_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>
